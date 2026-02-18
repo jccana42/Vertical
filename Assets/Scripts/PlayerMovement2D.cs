@@ -4,33 +4,40 @@ using UnityEngine;
 public class PlayerMovement2D : MonoBehaviour
 {
     [Header("Movement")]
-    [SerializeField] private float moveSpeed = 5f;
+    [SerializeField] private float moveSpeed = 5.3f;
+    [SerializeField] private float accel = 25f;
+    [SerializeField] private float decel = 35f;
 
     [Header("Jump")]
-    [SerializeField] private float jumpVelocity = 9f;
-    [SerializeField, Range(0f, 1f)] private float jumpCutMultiplier = 0.5f;
-    [SerializeField] private float coyoteTime = 0.08f;
-    [SerializeField] private float jumpBufferTime = 0.10f;
+    [SerializeField] private float jumpForce = 10f;
+    [SerializeField] private float coyoteTime = 0.1f;
+    [SerializeField] private float jumpBuffer = 0.1f;
+    [SerializeField] private float jumpCutMultiplier = 0.5f;
 
     [Header("Ground Check")]
     [SerializeField] private Transform groundCheck;
-    [SerializeField] private float groundCheckRadius = 0.15f;
-    [SerializeField] private LayerMask groundLayer;
+    [SerializeField] private float groundCheckRadius = 0.12f;
+    [SerializeField] private LayerMask groundMask;
+
+    [Header("Input")]
+    [SerializeField] private bool useMobileInput = true;
+
+    [Header("Visual")]
+    [SerializeField] private SpriteRenderer spriteRenderer;
+    [SerializeField] private bool spriteFacesLeftByDefault = true;
+
+    [Header("DEBUG")]
+    [SerializeField] private bool debugMovement = false;
 
     private Rigidbody2D rb;
 
-    private float inputX;
-    private bool isGrounded;
-
+    private float moveX;
     private float coyoteTimer;
     private float jumpBufferTimer;
 
-    private bool jumpHeld;
-    private bool jumpCutUsed;
-
-    // ?? Esto lo leerá PlayerAnimator2D
-    public bool JumpHeld => jumpHeld;
-    public bool IsGrounded => isGrounded;
+    public bool IsGrounded { get; private set; }
+    public bool JumpHeld { get; private set; }
+    public bool JumpPressed { get; private set; }
     public float XVel => rb != null ? rb.linearVelocity.x : 0f;
     public float YVel => rb != null ? rb.linearVelocity.y : 0f;
 
@@ -39,75 +46,91 @@ public class PlayerMovement2D : MonoBehaviour
         rb = GetComponent<Rigidbody2D>();
 
         if (groundCheck == null)
-            Debug.LogWarning("GroundCheck NO asignado. Arrastra el hijo GroundCheck al campo del script.");
+            groundCheck = transform;
+
+        if (spriteRenderer == null)
+            spriteRenderer = GetComponentInChildren<SpriteRenderer>();
     }
 
     private void Update()
     {
-        inputX = Input.GetAxisRaw("Horizontal");
-
-        isGrounded = CheckGrounded();
-
-        if (isGrounded)
+        // INPUT
+        if (useMobileInput)
         {
-            coyoteTimer = coyoteTime;
-            jumpCutUsed = false;
+            moveX = MobileInput.Horizontal;
+            JumpHeld = MobileInput.JumpHeld;
+
+            if (MobileInput.JumpDown)
+                jumpBufferTimer = jumpBuffer;
+            else
+                jumpBufferTimer -= Time.deltaTime;
         }
         else
         {
-            coyoteTimer -= Time.deltaTime;
+            moveX = Input.GetAxisRaw("Horizontal");
+            JumpHeld = Input.GetButton("Jump");
+
+            if (Input.GetButtonDown("Jump"))
+                jumpBufferTimer = jumpBuffer;
+            else
+                jumpBufferTimer -= Time.deltaTime;
         }
 
-        // Buffer de salto
-        if (Input.GetButtonDown("Jump"))
-            jumpBufferTimer = jumpBufferTime;
+        // DEBUG LOG
+        if (debugMovement)
+        {
+            Debug.Log($"[Movement] moveX={moveX:0.00} | MobileHorizontal={MobileInput.Horizontal:0.00} | rbVelX={rb.linearVelocity.x:0.00}");
+        }
 
-        jumpBufferTimer -= Time.deltaTime;
+        // GROUND CHECK
+        IsGrounded = Physics2D.OverlapCircle(groundCheck.position, groundCheckRadius, groundMask);
 
-        // Mantener salto
-        jumpHeld = Input.GetButton("Jump");
+        if (IsGrounded)
+            coyoteTimer = coyoteTime;
+        else
+            coyoteTimer -= Time.deltaTime;
+
+        JumpPressed = jumpBufferTimer > 0f;
+
+        if (jumpBufferTimer > 0f && coyoteTimer > 0f)
+        {
+            DoJump();
+            jumpBufferTimer = 0f;
+            coyoteTimer = 0f;
+        }
+
+        if (!JumpHeld && rb.linearVelocity.y > 0.01f)
+            rb.linearVelocity = new Vector2(rb.linearVelocity.x, rb.linearVelocity.y * jumpCutMultiplier);
+
+        // FLIP
+        if (spriteRenderer != null && Mathf.Abs(moveX) > 0.01f)
+        {
+            spriteRenderer.flipX = spriteFacesLeftByDefault
+                ? (moveX > 0f)
+                : (moveX < 0f);
+        }
     }
 
     private void FixedUpdate()
     {
-        rb.linearVelocity = new Vector2(inputX * moveSpeed, rb.linearVelocity.y);
-        HandleJump();
+        float targetX = moveX * moveSpeed;
+
+        float rate = Mathf.Abs(targetX) > 0.01f ? accel : decel;
+        float newX = Mathf.MoveTowards(rb.linearVelocity.x, targetX, rate * Time.fixedDeltaTime);
+
+        rb.linearVelocity = new Vector2(newX, rb.linearVelocity.y);
     }
 
-    private void HandleJump()
+    private void DoJump()
     {
-        // Salto si: buffer activo + grounded o coyote
-        if (jumpBufferTimer > 0f && coyoteTimer > 0f)
-        {
-            jumpBufferTimer = 0f;
-            coyoteTimer = 0f;
-
-            rb.linearVelocity = new Vector2(rb.linearVelocity.x, jumpVelocity);
-            jumpCutUsed = false;
-        }
-
-        // Salto variable: al soltar durante subida, recorte 1 vez
-        if (!jumpHeld && rb.linearVelocity.y > 0f && !jumpCutUsed)
-        {
-            rb.linearVelocity = new Vector2(rb.linearVelocity.x, rb.linearVelocity.y * jumpCutMultiplier);
-            jumpCutUsed = true;
-        }
-    }
-
-    private bool CheckGrounded()
-    {
-        if (groundCheck == null) return false;
-
-        return Physics2D.OverlapCircle(
-            groundCheck.position,
-            groundCheckRadius,
-            groundLayer
-        );
+        rb.linearVelocity = new Vector2(rb.linearVelocity.x, 0f);
+        rb.AddForce(Vector2.up * jumpForce, ForceMode2D.Impulse);
     }
 
     private void OnDrawGizmosSelected()
     {
         if (groundCheck == null) return;
+
         Gizmos.color = Color.yellow;
         Gizmos.DrawWireSphere(groundCheck.position, groundCheckRadius);
     }
