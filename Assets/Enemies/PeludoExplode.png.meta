@@ -1,0 +1,349 @@
+fileFormatVersion: 2
+guid: 97d16d6c673e12e45ba471fe57b46208
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -763602533754619521
+    second: PeludoExplode_0
+  - first:
+      213: 700408254295784776
+    second: PeludoExplode_1
+  - first:
+      213: 1068598159969566417
+    second: PeludoExplode_2
+  - first:
+      213: -6850767938946846143
+    second: PeludoExplode_3
+  - first:
+      213: 4036247996429394385
+    second: PeludoExplode_4
+  - first:
+      213: -7028977022708153651
+    second: PeludoExplode_5
+  - first:
+      213: 1314761781292728049
+    second: PeludoExplode_6
+  - first:
+      213: -8302671832566633431
+    second: PeludoExplode_7
+  - first:
+      213: 115862347613422630
+    second: PeludoExplode_8
+  - first:
+      213: -7612798497210229216
+    second: PeludoExplode_9
+  - first:
+      213: -8407612703902726980
+    second: PeludoExplode_10
+  - first:
+      213: 4195148538203399055
+    second: PeludoExplode_11
+  - first:
+      213: 8242396945192645547
+    second: PeludoExplode_12
+  - first:
+      213: -2043707993501885224
+    second: PeludoExplode_13
+  - first:
+      213: -4342031871182827178
+    second: PeludoExplode_14
+  - first:
+      213: 6147495214794444728
+    second: PeludoExplode_15
+  - first:
+      213: 7125188049281513633
+    second: PeludoExplode_16
+  - first:
+      213: -4552869856629229728
+    second: PeludoExplode_17
+  - first:
+      213: -5039352466765594041
+    second: PeludoExplode_18
+  - first:
+      213: 1812536448076920223
+    second: PeludoExplode_19
+  - first:
+      213: -4123802527175768782
+    second: PeludoExplode_20
+  - first:
+      213: -2719001231781631939
+    second: PeludoExplode_21
+  - first:
+      213: 373965939705993033
+    second: PeludoExplode_22
+  - first:
+      213: -8126555340082832332
+    second: PeludoExplode_23
+  - first:
+      213: -1213054970471709192
+    second: PeludoExplode_24
+  - first:
+      213: -1784094241475551532
+    second: PeludoExplode_25
+  - first:
+      213: -6881011409216953605
+    second: PeludoExplode_26
+  - first:
+      213: -1099014901832723348
+    second: PeludoExplode_27
+  - first:
+      213: -5766550264487130814
+    second: PeludoExplode_28
+  - first:
+      213: 251242878759012318
+    second: PeludoExplode_29
+  - first:
+      213: -6321773624454421769
+    second: PeludoExplode_30
+  - first:
+      213: 4921148493127446731
+    second: PeludoExplode_31
+  - first:
+      213: -4752663453172670249
+    second: PeludoExplode_32
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: WindowsStoreApps
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: PeludoExplode_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 1065
+        height: 754
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f79b7f19a832765f0800000000000000
+      internalID: -763602533754619521
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PeludoExplode_1
+      rect:
+        serializedVersion: 2
+        x: 1065
+        y: 0
+        width: 1065
+        height: 754
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 84d3d0ba89958b900800000000000000
+      internalID: 700408254295784776
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PeludoExplode_2
+      rect:
+        serializedVersion: 2
+        x: 2130
+        y: 0
+        width: 1065
+        height: 754
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1de3f946d5c64de00800000000000000
+      internalID: 1068598159969566417
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PeludoExplode_3
+      rect:
+        serializedVersion: 2
+        x: 3195
+        y: 0
+        width: 1065
+        height: 754
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 14230704bde2de0a0800000000000000
+      internalID: -6850767938946846143
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: cc290d96e06286a44b781e22106f1532
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries:
+      - key: SpriteEditor.SliceSettings
+        value: '{"sliceOnImport":false,"gridCellCount":{"x":4.0,"y":1.0},"gridSpriteSize":{"x":1065.0,"y":754.0},"gridSpriteOffset":{"x":0.0,"y":0.0},"gridSpritePadding":{"x":0.0,"y":0.0},"pivot":{"x":0.5,"y":0.5},"pivotPixels":{"x":0.0,"y":0.0},"autoSlicingMethod":0,"spriteAlignment":0,"pivotUnitMode":0,"slicingType":2,"keepEmptyRects":false,"isAlternate":false}'
+    nameFileIdTable:
+      PeludoExplode_0: -763602533754619521
+      PeludoExplode_1: 700408254295784776
+      PeludoExplode_2: 1068598159969566417
+      PeludoExplode_3: -6850767938946846143
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

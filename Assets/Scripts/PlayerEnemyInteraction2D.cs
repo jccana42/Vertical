@@ -17,17 +17,19 @@ public class PlayerEnemyInteraction2D : MonoBehaviour
     private Rigidbody2D rb;
     private Collider2D playerCol;
     private PlayerHealth health;
+    private PlayerAudio playerAudio;
 
     private void Awake()
     {
         rb = GetComponent<Rigidbody2D>();
         playerCol = GetComponent<Collider2D>();
         health = GetComponent<PlayerHealth>();
+        playerAudio = GetComponent<PlayerAudio>();
 
         if (debugLogs)
         {
             Debug.Log($"[PlayerEnemyInteraction2D] Awake en {name} | " +
-                      $"RB={(rb != null)} COL={(playerCol != null)} Health={(health != null)}");
+                      $"RB={(rb != null)} COL={(playerCol != null)} Health={(health != null)} Audio={(playerAudio != null)}");
         }
     }
 
@@ -56,18 +58,24 @@ public class PlayerEnemyInteraction2D : MonoBehaviour
         bool stomp = IsStomp(enemyCol);
 
         if (debugLogs)
-            Debug.Log($"[PlayerEnemyInteraction2D] stomp={stomp} killable={canKill} healthNull={(health == null)}");
+            Debug.Log($"[PlayerEnemyInteraction2D] stomp={stomp} killable={canKill} healthNull={(health == null)} audioNull={(playerAudio == null)}");
 
         if (stomp && canKill)
         {
-            Debug.Log("[PlayerEnemyInteraction2D] STOMP -> enemigo eliminado");
+            if (debugLogs) Debug.Log("[PlayerEnemyInteraction2D] STOMP -> enemigo eliminado");
+
+            // SONIDO: pisar enemigo
+            playerAudio?.PlayStompSound();
+
+            // Eliminar enemigo
             enemyKillable.Die();
 
+            // Rebote
             rb.linearVelocity = new Vector2(rb.linearVelocity.x, bounceVelocity);
         }
         else
         {
-            Debug.Log($"[PlayerEnemyInteraction2D] CONTACT DAMAGE -> {contactDamage}");
+            if (debugLogs) Debug.Log($"[PlayerEnemyInteraction2D] CONTACT DAMAGE -> {contactDamage}");
 
             if (health == null)
             {
@@ -80,7 +88,8 @@ public class PlayerEnemyInteraction2D : MonoBehaviour
             bool applied = health.Damage(contactDamage);
             int after = health.CurrentHealth;
 
-            Debug.Log($"[PlayerEnemyInteraction2D] Damage(applied={applied}) {before} -> {after}");
+            if (debugLogs)
+                Debug.Log($"[PlayerEnemyInteraction2D] Damage(applied={applied}) {before} -> {after}");
         }
     }
 

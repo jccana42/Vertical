@@ -10,60 +10,87 @@ public class CameraAspectLock : MonoBehaviour
     [SerializeField] private Color barColor = Color.black;
 
     private Camera cam;
+    private int lastW, lastH;
 
     private void Awake()
     {
         cam = GetComponent<Camera>();
         cam.backgroundColor = barColor;
-    }
 
-    private void Start()
-    {
+        Sanitize();
         Apply();
+        CacheSize();
     }
 
     private void OnValidate()
     {
-        if (targetAspect <= 0.01f) targetAspect = 16f / 9f;
-        if (cam == null) cam = GetComponent<Camera>();
+        cam = GetComponent<Camera>();
         if (cam != null) cam.backgroundColor = barColor;
+
+        Sanitize();
         Apply();
+        CacheSize();
+    }
+
+    private void Update()
+    {
+        // Solo recalcular si cambia la resolución
+        if (Screen.width != lastW || Screen.height != lastH)
+        {
+            Sanitize();
+            Apply();
+            CacheSize();
+        }
+    }
+
+    private void CacheSize()
+    {
+        lastW = Screen.width;
+        lastH = Screen.height;
+    }
+
+    private void Sanitize()
+    {
+        // Evita valores absurdos que provocan rects 0 y pantalla negra
+        if (targetAspect < 0.5f || targetAspect > 5f)
+            targetAspect = 16f / 9f;
+
+        if (Screen.width <= 0 || Screen.height <= 0)
+        {
+            // En editor a veces puede dar frames raros; no hagas nada
+            return;
+        }
     }
 
     private void Apply()
     {
         if (cam == null) return;
+        if (Screen.width <= 0 || Screen.height <= 0) return;
 
         float windowAspect = (float)Screen.width / Screen.height;
         float scaleHeight = windowAspect / targetAspect;
 
+        Rect rect = cam.rect;
+
         if (scaleHeight < 1f)
         {
-            // Barras arriba/abajo (letterbox)
-            Rect rect = cam.rect;
+            // Letterbox (arriba/abajo)
             rect.width = 1f;
-            rect.height = scaleHeight;
+            rect.height = Mathf.Max(0.01f, scaleHeight);
             rect.x = 0f;
-            rect.y = (1f - scaleHeight) / 2f;
-            cam.rect = rect;
+            rect.y = (1f - rect.height) * 0.5f;
         }
         else
         {
-            // Barras laterales (pillarbox)
+            // Pillarbox (laterales)
             float scaleWidth = 1f / scaleHeight;
-
-            Rect rect = cam.rect;
-            rect.width = scaleWidth;
+            rect.width = Mathf.Max(0.01f, scaleWidth);
             rect.height = 1f;
-            rect.x = (1f - scaleWidth) / 2f;
+            rect.x = (1f - rect.width) * 0.5f;
             rect.y = 0f;
-            cam.rect = rect;
         }
-    }
 
-    private void Update()
-    {
-        // Si el usuario rota pantalla o cambia resolución, se reajusta
-        Apply();
+        cam.rect = rect;
+        cam.backgroundColor = barColor;
     }
 }

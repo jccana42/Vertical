@@ -10,8 +10,8 @@ public class PlayerMovement2D : MonoBehaviour
 
     [Header("Jump")]
     [SerializeField] private float jumpForce = 10f;
-    [SerializeField] private float coyoteTime = 0.1f;
-    [SerializeField] private float jumpBuffer = 0.1f;
+    [SerializeField] private float coyoteTime = 0.10f;
+    [SerializeField] private float jumpBuffer = 0.10f;
     [SerializeField] private float jumpCutMultiplier = 0.5f;
 
     [Header("Ground Check")]
@@ -26,8 +26,8 @@ public class PlayerMovement2D : MonoBehaviour
     [SerializeField] private SpriteRenderer spriteRenderer;
     [SerializeField] private bool spriteFacesLeftByDefault = true;
 
-    [Header("DEBUG")]
-    [SerializeField] private bool debugMovement = false;
+    [Header("Audio (opcional)")]
+    [SerializeField] private PlayerAudio playerAudio;
 
     private Rigidbody2D rb;
 
@@ -35,6 +35,9 @@ public class PlayerMovement2D : MonoBehaviour
     private float coyoteTimer;
     private float jumpBufferTimer;
 
+    private bool wasGrounded;
+
+    // ====== API p�blica para Animator ======
     public bool IsGrounded { get; private set; }
     public bool JumpHeld { get; private set; }
     public bool JumpPressed { get; private set; }
@@ -50,11 +53,14 @@ public class PlayerMovement2D : MonoBehaviour
 
         if (spriteRenderer == null)
             spriteRenderer = GetComponentInChildren<SpriteRenderer>();
+
+        if (playerAudio == null)
+            playerAudio = GetComponent<PlayerAudio>();
     }
 
     private void Update()
     {
-        // INPUT
+        // ===== INPUT =====
         if (useMobileInput)
         {
             moveX = MobileInput.Horizontal;
@@ -76,22 +82,26 @@ public class PlayerMovement2D : MonoBehaviour
                 jumpBufferTimer -= Time.deltaTime;
         }
 
-        // DEBUG LOG
-        if (debugMovement)
-        {
-            Debug.Log($"[Movement] moveX={moveX:0.00} | MobileHorizontal={MobileInput.Horizontal:0.00} | rbVelX={rb.linearVelocity.x:0.00}");
-        }
-
-        // GROUND CHECK
+        // ===== GROUND CHECK =====
         IsGrounded = Physics2D.OverlapCircle(groundCheck.position, groundCheckRadius, groundMask);
 
+        // Detectar aterrizaje (para reset de sonido de salto)
+        if (!wasGrounded && IsGrounded)
+        {
+            playerAudio?.ResetJumpSound();
+        }
+        wasGrounded = IsGrounded;
+
+        // Coyote
         if (IsGrounded)
             coyoteTimer = coyoteTime;
         else
             coyoteTimer -= Time.deltaTime;
 
+        // Buffer para animator
         JumpPressed = jumpBufferTimer > 0f;
 
+        // ===== EJECUTAR SALTO =====
         if (jumpBufferTimer > 0f && coyoteTimer > 0f)
         {
             DoJump();
@@ -99,20 +109,22 @@ public class PlayerMovement2D : MonoBehaviour
             coyoteTimer = 0f;
         }
 
+        // ===== SALTO VARIABLE (si sueltas antes, salto m�s corto) =====
         if (!JumpHeld && rb.linearVelocity.y > 0.01f)
+        {
             rb.linearVelocity = new Vector2(rb.linearVelocity.x, rb.linearVelocity.y * jumpCutMultiplier);
+        }
 
-        // FLIP
+        // ===== FLIP =====
         if (spriteRenderer != null && Mathf.Abs(moveX) > 0.01f)
         {
-            spriteRenderer.flipX = spriteFacesLeftByDefault
-                ? (moveX > 0f)
-                : (moveX < 0f);
+            spriteRenderer.flipX = spriteFacesLeftByDefault ? (moveX > 0f) : (moveX < 0f);
         }
     }
 
     private void FixedUpdate()
     {
+        // Movimiento estable para m�vil: velocity directa con suavizado
         float targetX = moveX * moveSpeed;
 
         float rate = Mathf.Abs(targetX) > 0.01f ? accel : decel;
@@ -123,8 +135,12 @@ public class PlayerMovement2D : MonoBehaviour
 
     private void DoJump()
     {
+        // Reset vertical para salto consistente
         rb.linearVelocity = new Vector2(rb.linearVelocity.x, 0f);
         rb.AddForce(Vector2.up * jumpForce, ForceMode2D.Impulse);
+
+        // Sonido de salto (una vez por salto)
+        playerAudio?.TryPlayJumpSound();
     }
 
     private void OnDrawGizmosSelected()

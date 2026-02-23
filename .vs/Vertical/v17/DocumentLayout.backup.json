@@ -3,6 +3,30 @@
   "WorkspaceRootPath": "C:\\UnityProjects\\Vertical\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\UnityProjects\\Vertical\\Assets\\Scripts\\UIButtonFeedback.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Assets\\Scripts\\UIButtonFeedback.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\UnityProjects\\Vertical\\Assets\\Scripts\\EnemyKill.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Assets\\Scripts\\EnemyKill.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\UnityProjects\\Vertical\\Assets\\Scripts\\AutoDestroyAfterAnim.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Assets\\Scripts\\AutoDestroyAfterAnim.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\UnityProjects\\Vertical\\Assets\\Scripts\\PlayerAudio.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Assets\\Scripts\\PlayerAudio.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\UnityProjects\\Vertical\\Assets\\Scripts\\PlayerEnemyInteraction2D.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Assets\\Scripts\\PlayerEnemyInteraction2D.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\UnityProjects\\Vertical\\Assets\\Scripts\\PlayerMovement2D.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Assets\\Scripts\\PlayerMovement2D.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\UnityProjects\\Vertical\\Assets\\Scripts\\CameraAspectLock.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Assets\\Scripts\\CameraAspectLock.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
@@ -13,14 +37,6 @@
     {
       "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\UnityProjects\\Vertical\\Assets\\Scripts\\VirtualJoystick.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Assets\\Scripts\\VirtualJoystick.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\UnityProjects\\Vertical\\Assets\\Scripts\\PlayerMovement2D.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Assets\\Scripts\\PlayerMovement2D.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\UnityProjects\\Vertical\\Assets\\Scripts\\PlayerEnemyInteraction2D.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Assets\\Scripts\\PlayerEnemyInteraction2D.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\UnityProjects\\Vertical\\Assets\\Scripts\\MobileInput.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -57,10 +73,6 @@
     {
       "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\UnityProjects\\Vertical\\Assets\\Scripts\\PlayerAnimator2D.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Assets\\Scripts\\PlayerAnimator2D.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\UnityProjects\\Vertical\\Assets\\Scripts\\EnemyKill.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Assets\\Scripts\\EnemyKill.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -75,45 +87,45 @@
             {
               "$type": "Document",
               "DocumentIndex": 0,
-              "Title": "CameraAspectLock.cs",
-              "DocumentMoniker": "C:\\UnityProjects\\Vertical\\Assets\\Scripts\\CameraAspectLock.cs",
-              "RelativeDocumentMoniker": "Assets\\Scripts\\CameraAspectLock.cs",
-              "ToolTip": "C:\\UnityProjects\\Vertical\\Assets\\Scripts\\CameraAspectLock.cs",
-              "RelativeToolTip": "Assets\\Scripts\\CameraAspectLock.cs",
-              "ViewState": "AgIAAB4AAAAAAAAAAADwv0UAAAAAAAAAAAAAAA==",
+              "Title": "UIButtonFeedback.cs",
+              "DocumentMoniker": "C:\\UnityProjects\\Vertical\\Assets\\Scripts\\UIButtonFeedback.cs",
+              "RelativeDocumentMoniker": "Assets\\Scripts\\UIButtonFeedback.cs",
+              "ToolTip": "C:\\UnityProjects\\Vertical\\Assets\\Scripts\\UIButtonFeedback.cs",
+              "RelativeToolTip": "Assets\\Scripts\\UIButtonFeedback.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABYAAAABAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-02-18T19:20:16.797Z",
+              "WhenOpened": "2026-02-20T18:34:36.611Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "MusicManager.cs",
-              "DocumentMoniker": "C:\\UnityProjects\\Vertical\\Assets\\Scripts\\MusicManager.cs",
-              "RelativeDocumentMoniker": "Assets\\Scripts\\MusicManager.cs",
-              "ToolTip": "C:\\UnityProjects\\Vertical\\Assets\\Scripts\\MusicManager.cs",
-              "RelativeToolTip": "Assets\\Scripts\\MusicManager.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABMAAAAAAAAAAAAAAA==",
+              "DocumentIndex": 2,
+              "Title": "AutoDestroyAfterAnim.cs",
+              "DocumentMoniker": "C:\\UnityProjects\\Vertical\\Assets\\Scripts\\AutoDestroyAfterAnim.cs",
+              "RelativeDocumentMoniker": "Assets\\Scripts\\AutoDestroyAfterAnim.cs",
+              "ToolTip": "C:\\UnityProjects\\Vertical\\Assets\\Scripts\\AutoDestroyAfterAnim.cs",
+              "RelativeToolTip": "Assets\\Scripts\\AutoDestroyAfterAnim.cs",
+              "ViewState": "AgIAAAQAAAAAAAAAAADwvysAAAABAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-02-18T16:55:16.173Z",
+              "WhenOpened": "2026-02-20T17:23:35.89Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "MobileInput.cs",
-              "DocumentMoniker": "C:\\UnityProjects\\Vertical\\Assets\\Scripts\\MobileInput.cs",
-              "RelativeDocumentMoniker": "Assets\\Scripts\\MobileInput.cs",
-              "ToolTip": "C:\\UnityProjects\\Vertical\\Assets\\Scripts\\MobileInput.cs",
-              "RelativeToolTip": "Assets\\Scripts\\MobileInput.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAACwAAAAAAAAAAAAAAA==",
+              "DocumentIndex": 3,
+              "Title": "PlayerAudio.cs",
+              "DocumentMoniker": "C:\\UnityProjects\\Vertical\\Assets\\Scripts\\PlayerAudio.cs",
+              "RelativeDocumentMoniker": "Assets\\Scripts\\PlayerAudio.cs",
+              "ToolTip": "C:\\UnityProjects\\Vertical\\Assets\\Scripts\\PlayerAudio.cs",
+              "RelativeToolTip": "Assets\\Scripts\\PlayerAudio.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAACMAAAABAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-02-17T21:06:39.636Z",
+              "WhenOpened": "2026-02-19T17:26:35.034Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 7,
+              "DocumentIndex": 11,
               "Title": "JumpButton.cs",
               "DocumentMoniker": "C:\\UnityProjects\\Vertical\\Assets\\Scripts\\JumpButton.cs",
               "RelativeDocumentMoniker": "Assets\\Scripts\\JumpButton.cs",
@@ -125,7 +137,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 8,
               "Title": "VirtualJoystick.cs",
               "DocumentMoniker": "C:\\UnityProjects\\Vertical\\Assets\\Scripts\\VirtualJoystick.cs",
               "RelativeDocumentMoniker": "Assets\\Scripts\\VirtualJoystick.cs",
@@ -133,8 +145,7 @@
               "RelativeToolTip": "Assets\\Scripts\\VirtualJoystick.cs",
               "ViewState": "AgIAADoAAAAAAAAAAADwv2EAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-02-17T21:04:22.979Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-02-17T21:04:22.979Z"
             },
             {
               "$type": "Document",
@@ -144,14 +155,14 @@
               "RelativeDocumentMoniker": "Assets\\Scripts\\PlayerEnemyInteraction2D.cs",
               "ToolTip": "C:\\UnityProjects\\Vertical\\Assets\\Scripts\\PlayerEnemyInteraction2D.cs",
               "RelativeToolTip": "Assets\\Scripts\\PlayerEnemyInteraction2D.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAGYAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAAEcAAAAAAAAAAAAAwG4AAAABAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2026-02-17T17:48:28.183Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
+              "DocumentIndex": 10,
               "Title": "PlayerRespawn.cs",
               "DocumentMoniker": "C:\\UnityProjects\\Vertical\\Assets\\Scripts\\PlayerRespawn.cs",
               "RelativeDocumentMoniker": "Assets\\Scripts\\PlayerRespawn.cs",
@@ -163,7 +174,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 10,
+              "DocumentIndex": 14,
               "Title": "Stomp_Damage.cs",
               "DocumentMoniker": "C:\\UnityProjects\\Vertical\\Assets\\Scripts\\Stomp_Damage.cs",
               "RelativeDocumentMoniker": "Assets\\Scripts\\Stomp_Damage.cs",
@@ -175,7 +186,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 8,
+              "DocumentIndex": 12,
               "Title": "HealthUI.cs",
               "DocumentMoniker": "C:\\UnityProjects\\Vertical\\Assets\\Scripts\\HealthUI.cs",
               "RelativeDocumentMoniker": "Assets\\Scripts\\HealthUI.cs",
@@ -187,7 +198,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 9,
+              "DocumentIndex": 13,
               "Title": "PlayerHealth.cs",
               "DocumentMoniker": "C:\\UnityProjects\\Vertical\\Assets\\Scripts\\PlayerHealth.cs",
               "RelativeDocumentMoniker": "Assets\\Scripts\\PlayerHealth.cs",
@@ -199,7 +210,69 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 11,
+              "DocumentIndex": 1,
+              "Title": "EnemyKill.cs",
+              "DocumentMoniker": "C:\\UnityProjects\\Vertical\\Assets\\Scripts\\EnemyKill.cs",
+              "RelativeDocumentMoniker": "Assets\\Scripts\\EnemyKill.cs",
+              "ToolTip": "C:\\UnityProjects\\Vertical\\Assets\\Scripts\\EnemyKill.cs",
+              "RelativeToolTip": "Assets\\Scripts\\EnemyKill.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABcAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-02-17T16:57:00.412Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "CameraAspectLock.cs",
+              "DocumentMoniker": "C:\\UnityProjects\\Vertical\\Assets\\Scripts\\CameraAspectLock.cs",
+              "RelativeDocumentMoniker": "Assets\\Scripts\\CameraAspectLock.cs",
+              "ToolTip": "C:\\UnityProjects\\Vertical\\Assets\\Scripts\\CameraAspectLock.cs",
+              "RelativeToolTip": "Assets\\Scripts\\CameraAspectLock.cs",
+              "ViewState": "AgIAADkAAAAAAAAAAAAAwGAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-02-18T19:20:16.797Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "PlayerMovement2D.cs",
+              "DocumentMoniker": "C:\\UnityProjects\\Vertical\\Assets\\Scripts\\PlayerMovement2D.cs",
+              "RelativeDocumentMoniker": "Assets\\Scripts\\PlayerMovement2D.cs",
+              "ToolTip": "C:\\UnityProjects\\Vertical\\Assets\\Scripts\\PlayerMovement2D.cs",
+              "RelativeToolTip": "Assets\\Scripts\\PlayerMovement2D.cs",
+              "ViewState": "AgIAAHEAAAAAAAAAAADwv5gAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-02-04T17:22:53.923Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "MobileInput.cs",
+              "DocumentMoniker": "C:\\UnityProjects\\Vertical\\Assets\\Scripts\\MobileInput.cs",
+              "RelativeDocumentMoniker": "Assets\\Scripts\\MobileInput.cs",
+              "ToolTip": "C:\\UnityProjects\\Vertical\\Assets\\Scripts\\MobileInput.cs",
+              "RelativeToolTip": "Assets\\Scripts\\MobileInput.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAACwAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-02-17T21:06:39.636Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "MusicManager.cs",
+              "DocumentMoniker": "C:\\UnityProjects\\Vertical\\Assets\\Scripts\\MusicManager.cs",
+              "RelativeDocumentMoniker": "Assets\\Scripts\\MusicManager.cs",
+              "ToolTip": "C:\\UnityProjects\\Vertical\\Assets\\Scripts\\MusicManager.cs",
+              "RelativeToolTip": "Assets\\Scripts\\MusicManager.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABMAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-02-18T16:55:16.173Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 15,
               "Title": "EnemyPatrol2D.cs",
               "DocumentMoniker": "C:\\UnityProjects\\Vertical\\Assets\\Scripts\\EnemyPatrol2D.cs",
               "RelativeDocumentMoniker": "Assets\\Scripts\\EnemyPatrol2D.cs",
@@ -211,32 +284,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "PlayerMovement2D.cs",
-              "DocumentMoniker": "C:\\UnityProjects\\Vertical\\Assets\\Scripts\\PlayerMovement2D.cs",
-              "RelativeDocumentMoniker": "Assets\\Scripts\\PlayerMovement2D.cs",
-              "ToolTip": "C:\\UnityProjects\\Vertical\\Assets\\Scripts\\PlayerMovement2D.cs",
-              "RelativeToolTip": "Assets\\Scripts\\PlayerMovement2D.cs",
-              "ViewState": "AgIAAGIAAAAAAAAAAADwv4kAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-02-04T17:22:53.923Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 14,
-              "Title": "EnemyKill.cs",
-              "DocumentMoniker": "C:\\UnityProjects\\Vertical\\Assets\\Scripts\\EnemyKill.cs",
-              "RelativeDocumentMoniker": "Assets\\Scripts\\EnemyKill.cs",
-              "ToolTip": "C:\\UnityProjects\\Vertical\\Assets\\Scripts\\EnemyKill.cs",
-              "RelativeToolTip": "Assets\\Scripts\\EnemyKill.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-02-17T16:57:00.412Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 12,
+              "DocumentIndex": 16,
               "Title": "CameraTargetYFollow.cs",
               "DocumentMoniker": "C:\\UnityProjects\\Vertical\\Assets\\Scripts\\CameraTargetYFollow.cs",
               "RelativeDocumentMoniker": "Assets\\Scripts\\CameraTargetYFollow.cs",
@@ -248,7 +296,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 13,
+              "DocumentIndex": 17,
               "Title": "PlayerAnimator2D.cs",
               "DocumentMoniker": "C:\\UnityProjects\\Vertical\\Assets\\Scripts\\PlayerAnimator2D.cs",
               "RelativeDocumentMoniker": "Assets\\Scripts\\PlayerAnimator2D.cs",
