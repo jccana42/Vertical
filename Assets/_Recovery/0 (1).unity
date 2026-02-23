@@ -9667,7 +9667,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::SceneFadeIn
   cg: {fileID: 1790617647}
-  fadeInTime: 3
+  fadeInTime: 2
 --- !u!1 &1810764007
 GameObject:
   m_ObjectHideFlags: 0
@@ -10122,9 +10122,9 @@ Camera:
   m_NormalizedViewPortRect:
     serializedVersion: 2
     x: 0
-    y: 0
+    y: 0.41701314
     width: 1
-    height: 1
+    height: 0.16597371
   near clip plane: 0.3
   far clip plane: 1000
   field of view: 60
